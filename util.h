@@ -30,6 +30,7 @@
 #define FSCONFIG_SET_STRING 1
 #define fsopen(name, flags) syscall(__NR_fsopen, name, flags)
 #define fsconfig(fd, cmd, key, value, aux) syscall(__NR_fsconfig, fd, cmd, key, value, aux)
+#define ARRAY_SIZE(x) (sizeof(x) / sizeof((x)[0]))
 
 extern char *modprobe_win;
 extern char *modprobe_trigger;
